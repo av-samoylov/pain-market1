@@ -9,6 +9,7 @@ import ru.avsamoylov.painmarket1.repository.OrderRepository;
 @AllArgsConstructor
 public class OrderService {
     private OrderRepository orderRepository;
+
     public Order createOrder(Order order) {
        return orderRepository.createOrder(order);
     }

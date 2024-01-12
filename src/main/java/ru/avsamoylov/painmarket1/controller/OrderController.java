@@ -5,17 +5,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.avsamoylov.painmarket1.product.Product;
-import ru.avsamoylov.painmarket1.service.ProductService;
+import ru.avsamoylov.painmarket1.product.Order;
+import ru.avsamoylov.painmarket1.service.OrderService;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/products")
-public class ProductController {
-    private ProductService productService;
+@RequestMapping("/orders")
+public class OrderController {
+    private OrderService orderService;
 
     @PostMapping
-    public Product create(@RequestBody Product product) {
-        return productService.create(product);
+    public Order createOrder(@RequestBody Order order){
+       return orderService.createOrder(order);
     }
 }
